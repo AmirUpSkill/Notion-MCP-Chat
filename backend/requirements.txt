@@ -1,0 +1,12 @@
+# Core Web Framework & Server
+fastapi
+uvicorn[standard]
+
+# MCP & AI Integration
+mcp-use
+langchain
+langchain-google-genai
+
+# Configuration & Utilities
+python-dotenv
+pydantic-settings 
