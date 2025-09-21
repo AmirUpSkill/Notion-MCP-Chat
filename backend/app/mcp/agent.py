@@ -16,9 +16,9 @@ def create_agent(client: MCPClient) -> MCPAgent:
     """
     logger.info("🧠 Creating MCPAgent...")
     try:
-        # --- Step 1 : Initialize the LLM (Gemini 2.5 Pro ) ---
+        # --- Step 1 : Initialize the LLM (Gemini 2.5 Flash) ---
         llm = ChatGoogleGenerativeAI(
-            model="gemini-2.5-pro",
+            model="gemini-2.5-flash",
             google_api_key=settings.gemini_api,
             temperature=0.7,
         )

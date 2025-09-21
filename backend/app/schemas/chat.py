@@ -2,7 +2,6 @@ from datetime import datetime
 from typing import Union , Optional , Dict , Any , Literal 
 from pydantic import BaseModel , Field , field_validator 
 
-# --- Request Schemas --- 
 class ChatRequest(BaseModel):
     """
         Schema For Incoming Chat Requests from the Frontend 
@@ -18,6 +17,11 @@ class ChatRequest(BaseModel):
             "create a meeting notes page for today's standup"
         ]
 
+    )
+    # --- Add Notion Mode ----
+    enable_notion: Optional[bool] = Field(
+        True, 
+        description="Toggle Notion MCP integration (true for full agent with tools, false for basic LLM)"
     )
     @field_validator('message')
     @classmethod
